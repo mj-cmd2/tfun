@@ -13,7 +13,7 @@ function mountEditorial(context){
  function mount(target,items,eagerFirst){
   const frag=document.createDocumentFragment();
   items.forEach(([name,w,h],i)=>{
-   const img=document.createElement('img');img.alt='Contenus éditoriaux de démonstration';img.width=w;img.height=h;img.decoding='async';img.loading=eagerFirst&&i===0?'eager':'lazy';img.src='assets/'+name+'.webp';frag.append(img);
+   const img=document.createElement('img');img.alt='Contenus éditoriaux de démonstration';img.width=w;img.height=h;img.decoding='async';img.loading=eagerFirst&&i===0?'eager':'lazy';img.src='./'+name+'.webp';frag.append(img);
   });target.append(frag);
  }
  mount(before,sections.before,true);mount(after,sections.after,false);
